@@ -1,6 +1,7 @@
-function binarySearch(array, value, start, end) {
-  let startInner = start === undefined ? 0 : start;
-  let endInner = end === undefined ? array.length : end;
+export default function binarySearch(array, value, start, end, count) {
+  var start = start === undefined ? 0 : start;
+  var end = end === undefined ? array.length : end;
+  var count = count === undefined ? 0 : count;
 
   if (start > end)
     return -1;
@@ -10,10 +11,10 @@ function binarySearch(array, value, start, end) {
 
   console.log(start, end);
   if (item === value)
-    return index;
+    return `index: ${index} / count: ${count}`;
   else if (item < value)
-    return binarySearch(array, value, index + 1, endInner);
+    return binarySearch(array, value, index + 1, end, count++);
   else if (item > value)
-    return binarySearch(array, value, startInner, index - 1);
+    return binarySearch(array, value, start, index - 1, count++);
 
 }
