@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+}
+
+.text-box{
+  margin: 1rem auto;
+}
+
+button{
+  margin: auto;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  border: transparent;
+  background-color: teal;
+  color: antiquewhite;
+  padding: 0.5rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
