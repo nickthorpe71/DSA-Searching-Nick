@@ -7,14 +7,41 @@ export default class BinarySearchTree {
     this.right = null;
   }
 
-  dfs(values = []) {
+  //in order
+  dfsInOrder(values = []) {
     if (this.left)
-      values = this.left.dfs(values);
+      values = this.left.dfsInOrder(values);
 
     values.push(this.value);
 
     if (this.right)
-      values = this.right.dfs(values);
+      values = this.right.dfsInOrder(values);
+
+    return values;
+  }
+
+  //pre order
+  dfsPreOrder(values = []) {
+    values.push(this.value);
+
+    if (this.left)
+      values = this.left.dfsPreOrder(values);
+
+    if (this.right)
+      values = this.right.dfsPreOrder(values);
+
+    return values;
+  }
+
+  //post order
+  dfsPostOrder(values = []) {
+    if (this.left)
+      values = this.left.dfsPreOrder(values);
+
+    if (this.right)
+      values = this.right.dfsPreOrder(values);
+
+    values.push(this.value);
 
     return values;
   }
