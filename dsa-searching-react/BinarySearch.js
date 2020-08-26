@@ -5,8 +5,6 @@ export default function binarySearch(array, value, start, end, count) {
 
   if (start > end)
     return -1;
-  if (start > end)
-    return -1;
 
   const index = Math.floor((start + end) / 2);
   const item = array[index];
