@@ -4,6 +4,7 @@
 
 .text-box{
   margin: 1rem auto;
+  font-size: 1rem;
 }
 
 button{
@@ -13,8 +14,12 @@ button{
   border: transparent;
   background-color: teal;
   color: antiquewhite;
-  padding: 0.5rem;
+  padding: 0.75rem;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
+.inputs{
+  display: flex;
+  flex-direction: column;
+}
